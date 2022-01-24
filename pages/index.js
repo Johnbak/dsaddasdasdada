@@ -14,7 +14,7 @@ export default function Home() {
         </h1>
 
         <p className="description">
-          Get started by editing1111111 <code>pages/index.js</code>
+          NA SU SU NA ^^\/ <code>pages/index.js</code>
         </p>
 
         <div className="grid">
