@@ -23,26 +23,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Update NPM
-        run: npm i -g npm@latest
-
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-            ${{ runner.OS }}-
-
+      - name: NPM install
+        run: npm install
       - name: Build
         run: |
-          npm i --legacy-peer-deps
           npm run build
           npm run export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          deploy_key: ${{ secrets.ACTIONS_SECRET_KEY }}
           publish_dir: ./out
