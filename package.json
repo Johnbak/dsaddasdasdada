@@ -1,6 +1,5 @@
 {
   "private": true,
-  "homepage": "http://github.com/Johnbak/dsaddasdasdada",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
