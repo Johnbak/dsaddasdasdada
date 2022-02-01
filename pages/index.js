@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { assetPrefix } from '../next.config';
 export default function Home() {
   return (
     <div className="container">
@@ -55,7 +56,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="public/vercel.svg" alt="Vercel" className="logo" />
+          <img src={`${assetPrefix}/vercel.svg`} alt="Vercel" className="logo" />
         </a>
       </footer>
 
