@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 function index() {
   return <div>
     <nav className="navbar navbar-light bg-light">
